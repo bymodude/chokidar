@@ -591,7 +591,7 @@ async _emit(event, path, val1, val2, val3) {
     }
   }
 
-  if (awf && (event === EV_ADD || event === EV_CHANGE) && this._readyEmitted) {
+  if (awf && (event === EV_ADD || event === EV_CHANGE)) {
     const awfEmit = (err, stats) => {
       if (err) {
         event = args[0] = EV_ERROR;
